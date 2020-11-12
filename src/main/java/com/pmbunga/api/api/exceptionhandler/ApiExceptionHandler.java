@@ -1,4 +1,4 @@
-package com.pmbunga.api.api.controller.exceptionhandler;
+package com.pmbunga.api.api.exceptionhandler;
 
 import java.time.LocalDateTime;
 
