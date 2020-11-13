@@ -1,9 +1,8 @@
 package com.pmbunga.api.api.exceptionhandler;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
-
-import javax.net.ssl.SSLEngineResult.Status;
 
 import com.pmbunga.api.domain.exception.NegocioException;
 
@@ -32,7 +31,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
       var problema = new Problema();
         problema.setStatus(status.value());
         problema.setTitulo(ex.getMessage());
-        problema.setDataHora(LocalDateTime.now());
+        problema.setDataHora(OffsetDateTime.now());
         return super.handleExceptionInternal(ex,problema, new HttpHeaders(), status, request);
    }
 
