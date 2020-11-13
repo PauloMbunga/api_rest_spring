@@ -1,11 +1,11 @@
 CREATE TABLE ordem_servico(
   id INT PRIMARY KEY,
-  cliente_id int not null,
+  cliente_id INT not null,
   descricao varchar(100) not null,
   preco decimal(10,2) not null,
   status varchar(20) not null,
-  data_abertura datetime not null,
-  data_finalizacao datetime
+  data_abertura Timestamp with Time Zone not null,
+  data_finalizacao Timestamp with Time Zone
 );
 
 
