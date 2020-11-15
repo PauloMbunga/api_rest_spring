@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -70,6 +71,15 @@ public class OrdemServicoController {
         return ResponseEntity.notFound().build();
 
     }
+
+@PutMapping("/{ordemServicoId}/finalizacao")
+@ResponseStatus(HttpStatus.NO_CONTENT)
+public void finalizar(@PathVariable Long ordemServicoId){
+
+    gestaoOrdemServicoService.finalizar(ordemServicoId);
+}
+
+
 
     private OrdemServicoModel toModel(OrdemServico ordemServico){
 

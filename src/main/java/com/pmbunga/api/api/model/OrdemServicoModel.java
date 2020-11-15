@@ -13,7 +13,7 @@ public class OrdemServicoModel {
     private BigDecimal preco;
     private StatusOrdemServico status;
     private OffsetDateTime dataAbertura;
-    private OffsetDateTime dataFinalizcao;
+    private OffsetDateTime dataFinalizacao;
 
     public Long getId() {
         return id;
@@ -57,20 +57,21 @@ public class OrdemServicoModel {
         this.dataAbertura = dataAbertura;
     }
 
-    public OffsetDateTime getDataFinalizcao() {
-        return dataFinalizcao;
-    }
-
-    public void setDataFinalizcao(OffsetDateTime dataFinalizcao) {
-        this.dataFinalizcao = dataFinalizcao;
-    }
-
+   
     public ClienteResumoModel getCliente() {
         return cliente;
     }
 
     public void setCliente(ClienteResumoModel cliente) {
         this.cliente = cliente;
+    }
+
+    public OffsetDateTime getDataFinalizacao() {
+        return dataFinalizacao;
+    }
+
+    public void setDataFinalizacao(OffsetDateTime dataFinalizacao) {
+        this.dataFinalizacao = dataFinalizacao;
     }
 
 
